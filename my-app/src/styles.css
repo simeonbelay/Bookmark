@@ -1,0 +1,106 @@
+.App {
+  font-family: Shenttpuro;
+  text-align: center;
+  color:#CAF3E5;
+}
+
+.App {
+  background-image: url('background14X.png'); /* Path to your image */
+  background-attachment: fixed;
+  background-size:cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  color: rgb(226, 156, 174); /* Text color to ensure readability */
+  
+}
+
+.title {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Aligns items vertically */
+  position: relative; /* Allows for absolute positioning of the link */
+  text-align: center; /* Centers the text within flex items */ 
+
+}
+
+.title h2 {
+  flex-grow: 1; /* Makes h1 take up available space */
+  text-align: center; /* Ensures h1 is centered */
+  
+}
+
+.title a {
+  position: absolute; /* Position it absolutely within the relative .title */
+  right: 0; /* Aligns it to the far right */
+  margin-right: 20px; /* Optional: Adds space from the right edge */
+  background-color:#8ac7e6;
+  font-size:x-large;
+}
+
+
+
+.Subheader {
+  font-family: papyrus;
+  text-align: center;
+  color: rgb(241, 202, 212);
+  
+}
+
+
+
+.NavBar{
+  text-align: left;
+  border-style: solid;
+  border-color:#dde8ee;
+  background-color: #4e6a79;
+  display:inline-block;
+  width: 99.8%;
+  font-size:large;
+}
+
+a.NavItem{
+  margin-left: 7%;
+}
+
+#SearchBar {
+  margin-top: 0.5%;
+  width: 30%;
+  position: absolute; /* Position it absolutely within the relative .title */
+  right: 0; /* Aligns it to the far right */
+  margin-right: 20px; /* Optional: Adds space from the right edge */
+}
+
+
+
+
+
+/* a href */
+a:link {
+  color:#8ac7e6;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color:#dde8ee;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color:#d34e44;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color:#d34e44;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+
+
+
+html{background-color: rgba(32, 33, 36, 0.973);}
