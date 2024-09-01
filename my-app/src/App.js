@@ -1,6 +1,8 @@
 import "./styles.css";
 //import App from "./App";
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import NavBar from './components/NavBar'
+import Sidebar from './components/Sidebar'
 
 export default function App() {
 
@@ -9,14 +11,34 @@ export default function App() {
     const [search, SetSearch] = useState("");
     
     const GetTopAnime = async () => {
-      const temp = await fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
-        .then(res => res.json());
-  
-      SetTopAnime(temp.top.slice(0, 5));
+      //try {
+        const response = await fetch(`https://api.jikan.moe/v4/top/anime`);
+        const temp = await response.json();
+    
+        console.log('Fetched data:', temp);
+    
+       // if (temp.data && Array.isArray(temp.data)) {
+          //console.log('about to slice');
+          //SetTopAnime(temp.data.slice(0, 1));
+          //console.log('sliced');
+        //} else {
+         // console.error('Unexpected response structure:', temp);
+        //}
+      //} catch (error) {
+       // console.error('Error fetching top anime:', error);
+      //}
     }
+    
+    
+    
 
-   
-  
+    useEffect(() =>{
+      GetTopAnime();
+      console.log("START OF TEH LOG")
+      
+    }, []);
+      console.log(topAnime);
+
   
   
   
@@ -25,12 +47,14 @@ export default function App() {
   
   
   return (
-    <div class ="App">
+
+
+    <div className ="App">
       {/** HEADING  **/}
       <h1 id = "header">Anime Bookmarking System - MAL Extension</h1>
-      <div class = "title">
-      <h2 class = "Subheader">Where all your anime dreams come true!</h2>
-        <a href = "/Login/Registration" class = "login">
+      <div className = "title">
+      <h2 className = "Subheader">Where all your anime dreams come true!</h2>
+        <a href = "/Login/Registration" className = "login">
           Login/Registration
         </a>
       </div>
@@ -39,23 +63,16 @@ export default function App() {
 
 
       {/** NAVBAR  **/}
-      <div class = "NavBar">
-        <a href = "/Home" class = "NavItem">
-          Home
-        </a>
-        <a href = "/Anime" class = "NavItem">
-            Anime
-        </a>
-        <a href = "/Favorites" class = "NavItem">
-            Favorites
-        </a>
-        <input type="text" id="SearchBar" placeholder="Search..."></input>
-      </div>
+      <NavBar />
+      <Sidebar />
+   
+
+      
 
 
 
       {/** CONTENT **/}
-
+      
 
 
 
