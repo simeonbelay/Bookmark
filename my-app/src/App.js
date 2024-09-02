@@ -20,7 +20,7 @@ export default function App() {
       
        // if (temp.data && Array.isArray(temp.data)) {
           //console.log('about to slice');
-          SetTopAnime(temp.data.slice(0, 5));
+          SetTopAnime(temp.data.slice(0, 3));
           //console.log('sliced');
         //} else {
          // console.error('Unexpected response structure:', temp);

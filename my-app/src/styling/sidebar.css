@@ -59,12 +59,38 @@ nav {
     font-weight: bold; /* Make text bold */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add a subtle shadow for better readability */
     margin-bottom: 20px; /* Space below the heading */
-    padding: 10px; /* Padding inside the border */
+    padding: 1px; /* Padding inside the border */
     border: 2px solid #fff; /* White border around the heading */
     border-radius: 10px; /* Circular corners */
     display: inline-block; /* Fit the border closely around the text */
     background-color: rgba(0, 0, 0, 0.3); /* Optional: semi-transparent background to help with visibility */
 }
+
+#topAnime2 {
+    color: #ddc3c3; /* White text color for better contrast */
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: x-large;
+    font-weight: bold; /* Make text bold */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add a subtle shadow for better readability */
+    margin-bottom: 20px; /* Space below the heading */
+    padding: 5px; /* Padding inside the border */
+    border-radius: 100px; /* Circular corners */
+    display: inline-block; /* Fit the border closely around the text */
+    animation: blink-animation 2s infinite; /* Apply the blinking animation */
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.35;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .topAnime:hover {
     background-color: #ddd; /* Light gray background on hover */
