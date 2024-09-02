@@ -2,6 +2,7 @@
   font-family: Shenttpuro;
   text-align: center;
   color:#CAF3E5;
+  
 }
 
 .App {
@@ -55,7 +56,7 @@
   text-align: left;
   border-style: solid;
   border-color:#dde8ee;
-  background-color: #4e6a79;
+  background-color:#43475ed2;
   display:inline-block;
   width: 99.8%;
   font-size:large;

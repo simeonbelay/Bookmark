@@ -1,0 +1,77 @@
+/* Sidebar styling */
+aside {
+    width: 250px; /* Adjust width as needed */
+    background-color: #5a5c6bad; /* Light gray background */
+    padding: 15px; /* Spacing inside the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #363535; /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded corners for the handle */
+}
+
+/* Scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:#5c5959; /* Darker color when hovered */
+}
+
+
+
+
+
+
+/* Sidebar navigation styling */
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for each anime link */
+.topAnime {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Dark gray text color */
+    margin-bottom: 10px; /* Space between items */
+    padding: 5px;
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    
+}
+
+#topAnime {
+    color: #fff; /* White text color for better contrast */
+    font-size: xx-large;
+    font-weight: bold; /* Make text bold */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add a subtle shadow for better readability */
+    margin-bottom: 20px; /* Space below the heading */
+    padding: 10px; /* Padding inside the border */
+    border: 2px solid #fff; /* White border around the heading */
+    border-radius: 10px; /* Circular corners */
+    display: inline-block; /* Fit the border closely around the text */
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: semi-transparent background to help with visibility */
+}
+
+.topAnime:hover {
+    background-color: #ddd; /* Light gray background on hover */
+}
+
+/* Ensure content area does not overlap with sidebar */
+.content {
+    flex: 1; /* Take up remaining space */
+    padding: 20px; /* Space inside the content area */
+}

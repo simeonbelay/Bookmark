@@ -1,4 +1,5 @@
-import "./styles.css";
+import "./styling/styles.css";
+import "./styling/sidebar.css";
 //import App from "./App";
 import React, { useState, useEffect } from 'react';
 import NavBar from './components/NavBar'
@@ -16,10 +17,10 @@ export default function App() {
         const temp = await response.json();
     
         console.log('Fetched data:', temp);
-    
+      
        // if (temp.data && Array.isArray(temp.data)) {
           //console.log('about to slice');
-          //SetTopAnime(temp.data.slice(0, 1));
+          SetTopAnime(temp.data.slice(0, 5));
           //console.log('sliced');
         //} else {
          // console.error('Unexpected response structure:', temp);
@@ -64,7 +65,7 @@ export default function App() {
 
       {/** NAVBAR  **/}
       <NavBar />
-      <Sidebar />
+      <Sidebar topAnime = {topAnime} />
    
 
       
